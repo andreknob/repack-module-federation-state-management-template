@@ -1,0 +1,25 @@
+{
+  "name": "repack-module-federation-state-management-template",
+  "version": "1.0.0",
+  "description": "A yarn workspaces template project that uses Repack with Module Federation for React Native microfrontends apps. This template also has integrations with some different solutions for state management",
+  "repository": "git@github.com:andreknob/repack-module-federation-state-management-template.git",
+  "author": "André Knob <knobandre@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start:host": "yarn workspace host run start",
+    "start:app1": "yarn workspace app1 run start",
+    "start:standalone:app1": "yarn workspace app1 run start:standalone",
+    "run:host:android": "yarn workspace host run android",
+    "run:host:ios": "yarn workspace host run ios",
+    "run:app1:android": "yarn workspace app1 run android",
+    "run:app1:ios": "yarn workspace app1 run ios",
+    "bootstrap:pods": "yarn workspaces foreach run pod_install",
+    "bootstrap": "yarn && yarn bootstrap:pods",
+    "clean": "find ./ -type d -name 'node_modules' -exec rm -rf '{}' +",
+    "start": "concurrently -P 'yarn:start:*(!standalone) {1}'"
+  },
+  "devDependencies": {
+    "concurrently": "^7.2.2"
+  }
+}
