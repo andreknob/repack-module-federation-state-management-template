@@ -6,6 +6,9 @@
   "author": "André Knob <knobandre@gmail.com>",
   "license": "MIT",
   "private": true,
+  "workspaces": [
+    "packages/**"
+  ],
   "scripts": {
     "start:host": "yarn workspace host run start",
     "start:app1": "yarn workspace app1 run start",
