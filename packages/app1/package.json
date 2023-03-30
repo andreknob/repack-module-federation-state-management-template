@@ -6,10 +6,11 @@
     "hoistingLimits": "workspaces"
   },
   "scripts": {
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
+    "android": "react-native run-android --no-packager",
+    "ios": "react-native run-ios --no-packager",
     "lint": "eslint .",
-    "start": "react-native start",
+    "start": "react-native webpack-start --port 8082",
+    "start:standalone": "STANDALONE=1 react-native webpack-start --port 8081",
     "test": "jest"
   },
   "dependencies": {

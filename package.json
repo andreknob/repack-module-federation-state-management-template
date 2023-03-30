@@ -10,17 +10,17 @@
     "packages/**"
   ],
   "scripts": {
+    "start": "concurrently -P 'yarn:start:*(!standalone) {1}'",
+    "android": "yarn workspace host run android",
+    "ios": "yarn workspace host run ios",
     "start:host": "yarn workspace host run start",
     "start:app1": "yarn workspace app1 run start",
     "start:standalone:app1": "yarn workspace app1 run start:standalone",
-    "run:host:android": "yarn workspace host run android",
-    "run:host:ios": "yarn workspace host run ios",
     "run:app1:android": "yarn workspace app1 run android",
     "run:app1:ios": "yarn workspace app1 run ios",
     "bootstrap:pods": "yarn workspaces foreach run pod_install",
     "bootstrap": "yarn && yarn bootstrap:pods",
-    "clean": "find ./ -type d -name 'node_modules' -exec rm -rf '{}' +",
-    "start": "concurrently -P 'yarn:start:*(!standalone) {1}'"
+    "clean": "find ./ -type d -name 'node_modules' -exec rm -rf '{}' +"
   },
   "devDependencies": {
     "concurrently": "^7.2.2"

@@ -235,11 +235,12 @@ export default (env) => {
 
       new Repack.plugins.ModuleFederationPlugin({
         name: 'app1',
-        // exposes: {
-        // },
-        remotes: {
-          host: 'host@dynamic',
+        exposes: {
+          './IncreaseCountButton': './src/IncreaseCountButton.tsx',
         },
+        // remotes: {
+        //   host: 'host@dynamic',
+        // },
         shared: {
           react: {
             ...Repack.Federated.SHARED_REACT,

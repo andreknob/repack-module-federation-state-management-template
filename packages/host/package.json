@@ -6,10 +6,10 @@
     "hoistingLimits": "workspaces"
   },
   "scripts": {
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
+    "android": "react-native run-android --no-packager",
+    "ios": "react-native run-ios --no-packager",
     "lint": "eslint .",
-    "start": "react-native start",
+    "start": "react-native webpack-start",
     "test": "jest"
   },
   "dependencies": {
