@@ -1,10 +1,10 @@
 import React from 'react';
 import { Text, TouchableOpacity, StyleSheet } from 'react-native';
 // @ts-ignore
-// import useStore from 'host/Store';
+import useZustandStore from 'host/ZustandStore';
 
-const IncreaseCountButton = ({ increase, count }) => {
-    // const { increase, count } = useStore();
+const IncreaseCountButton = () => {
+    const { increase, count } = useZustandStore();
 
     return (
         <TouchableOpacity style={styles.container} onPress={() => increase(1)}>
@@ -23,6 +23,5 @@ const styles = StyleSheet.create({
         padding: 5
     }
 });
-
 
 export default IncreaseCountButton;

@@ -233,9 +233,9 @@ export default (env) => {
 
       new Repack.plugins.ModuleFederationPlugin({
         name: 'host',
-        // exposes: {
-        //   './Store': './src/store/index.ts',
-        // },
+        exposes: {
+          './ZustandStore': './src/store/zustand/index.ts',
+        },
         shared: {
           react: {
             ...Repack.Federated.SHARED_REACT,

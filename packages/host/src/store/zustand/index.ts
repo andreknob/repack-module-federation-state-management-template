@@ -4,9 +4,10 @@ import AsyncStorage from '@react-native-async-storage/async-storage'
 
 interface IState {
     count: number;
+    increase: (by: number) => void;
 }
 
-const useStore = create<IState>()(
+const useZustandStore = create<IState>()(
   devtools(
     persist(
       (set) => ({
@@ -21,6 +22,6 @@ const useStore = create<IState>()(
   )
 );
 
-export type TUseStore = typeof useStore;
+export type TUseZustandStore = typeof useZustandStore;
 
-export default useStore;
+export default useZustandStore;

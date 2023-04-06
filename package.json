@@ -22,10 +22,6 @@
     "bootstrap": "yarn && yarn bootstrap:pods",
     "clean": "find ./ -type d -name 'node_modules' -exec rm -rf '{}' +"
   },
-  "dependencies": {
-    "react": "18.2.0",
-    "react-native": "0.71.5"
-  },
   "devDependencies": {
     "concurrently": "^7.2.2"
   }

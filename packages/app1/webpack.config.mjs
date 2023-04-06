@@ -238,9 +238,9 @@ export default (env) => {
         exposes: {
           './IncreaseCountButton': './src/IncreaseCountButton.tsx',
         },
-        // remotes: {
-        //   host: 'host@dynamic',
-        // },
+        remotes: {
+          host: 'host@dynamic',
+        },
         shared: {
           react: {
             ...Repack.Federated.SHARED_REACT,
