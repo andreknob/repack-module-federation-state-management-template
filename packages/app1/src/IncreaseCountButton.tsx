@@ -2,6 +2,10 @@ import React from 'react';
 import { Text, TouchableOpacity, StyleSheet } from 'react-native';
 // @ts-ignore
 import useZustandStore from 'host/ZustandStore';
+// @ts-ignore
+import testObject from 'module/test';
+
+console.log(testObject);
 
 const IncreaseCountButton = () => {
     const { increase, count } = useZustandStore();

@@ -15,6 +15,7 @@
     "ios": "yarn workspace host run ios",
     "start:host": "yarn workspace host run start",
     "start:app1": "yarn workspace app1 run start",
+    "start:module": "yarn workspace module run start",
     "start:standalone:app1": "yarn workspace app1 run start:standalone",
     "run:app1:android": "yarn workspace app1 run android",
     "run:app1:ios": "yarn workspace app1 run ios",

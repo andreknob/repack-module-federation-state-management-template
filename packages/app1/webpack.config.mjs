@@ -240,6 +240,7 @@ export default (env) => {
         },
         remotes: {
           host: 'host@dynamic',
+          module: 'module@dynamic',
         },
         shared: {
           react: {

@@ -11,6 +11,7 @@ const resolveURL = Federated.createURLResolver({
   containers: {
     'host': 'http://localhost:8081/[name][ext]',
     'app1': 'http://localhost:8082/[name][ext]',
+    'module': 'http://localhost:8083/[name][ext]',
   },
 });
   

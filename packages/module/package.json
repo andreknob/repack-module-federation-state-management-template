@@ -1,0 +1,27 @@
+{
+  "name": "module",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "installConfig": {
+    "hoistingLimits": "workspaces"
+  },
+  "main": "src/index.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "build:dev": "webpack --mode development",
+    "build:start": "cd dist && PORT=3000 npx serve",
+    "start": "webpack serve --open --mode development --port 8083",
+    "start:standalone": "webpack serve --open --mode development",
+    "start:live": "webpack serve --open --mode development --live-reload --hot"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "babel-loader": "^9.1.2",
+    "css-loader": "^6.7.3",
+    "postcss-loader": "^7.2.4",
+    "style-loader": "^3.3.2",
+    "webpack": "^5.77.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.13.2"
+  }
+}
