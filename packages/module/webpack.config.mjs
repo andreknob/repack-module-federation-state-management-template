@@ -36,8 +36,8 @@ export default {
   },
   plugins: [
     new webpack.container.ModuleFederationPlugin({
-      name: "module",
-      filename: "module.container.bundle",
+      name: "testingModule",
+      filename: "remoteEntry.js",
       exposes: {
         "./test": "./index.js",
       },

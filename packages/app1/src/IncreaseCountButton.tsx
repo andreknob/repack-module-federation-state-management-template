@@ -3,9 +3,7 @@ import { Text, TouchableOpacity, StyleSheet } from 'react-native';
 // @ts-ignore
 import useZustandStore from 'host/ZustandStore';
 // @ts-ignore
-import testObject from 'module/test';
-
-console.log(testObject);
+import testObject from 'testingModule/test';
 
 const IncreaseCountButton = () => {
     const { increase, count } = useZustandStore();
@@ -13,6 +11,7 @@ const IncreaseCountButton = () => {
     return (
         <TouchableOpacity style={styles.container} onPress={() => increase(1)}>
             <Text>Increase count from app1: {count}</Text>
+            <Text>{testObject.value}</Text>
         </TouchableOpacity>
     );
 }
